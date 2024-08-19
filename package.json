@@ -1,0 +1,5 @@
+{
+	"dependencies": {
+		"@te-one/file-push": "^1.0.0"
+	}
+}

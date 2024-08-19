@@ -178,3 +178,7 @@ pyrightconfig.json
 api/.vscode
 
 .idea/
+.vscode/*
+!.vscode/launch.json
+pyrightconfig.json
+node_modules/*
