@@ -1,6 +1,5 @@
 'use client'
 import { useCallback, useEffect } from 'react'
-import Link from 'next/link'
 import { useBoolean } from 'ahooks'
 import { useSelectedLayoutSegment } from 'next/navigation'
 import { Bars3Icon } from '@heroicons/react/20/solid'
@@ -11,7 +10,6 @@ import DatasetNav from './dataset-nav'
 import EnvNav from './env-nav'
 import ExploreNav from './explore-nav'
 import ToolsNav from './tools-nav'
-import GithubStar from './github-star'
 import { WorkspaceProvider } from '@/context/workspace-context'
 import { useAppContext } from '@/context/app-context'
 import LogoSite from '@/app/components/base/logo/logo-site'
@@ -55,21 +53,7 @@ const Header = () => {
         >
           <Bars3Icon className="h-4 w-4 text-gray-500" />
         </div>}
-        {!isMobile && <>
-          <Link href="/apps" className='flex items-center mr-4'>
-            <LogoSite className='object-contain' />
-          </Link>
-          <GithubStar />
-        </>}
       </div>
-      {isMobile && (
-        <div className='flex'>
-          <Link href="/apps" className='flex items-center mr-4'>
-            <LogoSite />
-          </Link>
-          <GithubStar />
-        </div>
-      )}
       {!isMobile && (
         <div className='flex items-center'>
           {!isCurrentWorkspaceDatasetOperator && <ExploreNav className={navClassName} />}
